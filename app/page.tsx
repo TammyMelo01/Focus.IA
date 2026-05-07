@@ -1,5 +1,13 @@
 "use client";
 
+const [theme, setTheme] = useState("light");
+
+function toggleTheme() {
+  const nextTheme = theme === "light" ? "dark" : "light";
+  setTheme(nextTheme);
+  document.body.className = nextTheme;
+}
+
 import { useState } from "react";
 import { Brain, CalendarClock, Loader2, ShieldCheck, Sparkles, TimerReset } from "lucide-react";
 import { TaskCard } from "@/components/TaskCard";
